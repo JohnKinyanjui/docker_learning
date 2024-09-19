@@ -1,0 +1,11 @@
+services:
+  web-fe:
+    build: .
+    command: flask run --host=0.0.0.0
+    ports:
+      - 5000:5000
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - 6379
